@@ -1,21 +1,19 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class vmsAdminTesting {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver", "F:\\work Space\\Selenium Project\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "F:\\\\work Space\\\\Selenium drivers\\\\geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		// opening the URL bar and type the text
 		driver.navigate().to("http:\\3.17.72.4");  
         
 		//  SUPER ADMIN LOGIN   
-	    driver.findElement(By.id("inputName")).sendKeys("admin@vms.com");        
+	    driver.findElement(By.id("inputName")).sendKeys("admin@gmail.com");        
 	    Thread.sleep(10);
 	    
 	    driver.findElement(By.id("inputPassword")).sendKeys("passpass");        
@@ -23,7 +21,7 @@ public class vmsAdminTesting {
 	    // click Login button
 	    driver.findElement(By.xpath("//*[@id=\"externalDiv\"]/div/div[2]/div[5]/button")).click();  
 	   Thread.sleep(15000);  
-	 /* 
+	  
 	   // Hover the VMS Admin
 	   driver.findElement(By.xpath("//*[@id=\"userName\"]")).click();
 	  // Thread.sleep(2000);
@@ -114,19 +112,19 @@ public class vmsAdminTesting {
 	   driver.findElement(By.xpath("//*[@id=\"tab-general\"]/div/div[2]/div[2]/button")).click();
 	   Thread.sleep(500);
 	   
-	   */
+	   
 	   
 	// open gmail
 			driver.get("http:\\gmail.com");
 			Thread.sleep(3000);
 			// mail inputs
-			driver.findElement(By.className("zHQkBf")).sendKeys("companyhead123@gmail.com");
+			driver.findElement(By.className("zHQkBf")).sendKeys("company@gmail.com");
 			Thread.sleep(1000);   
 			
 			driver.findElement(By.className("CwaK9")).click();
 			Thread.sleep(2000);
 			
-			driver.findElement(By.className("whsOnd")).sendKeys("agilance");
+			driver.findElement(By.className("whsOnd")).sendKeys("passsword");
 			Thread.sleep(1000);
 			
 			driver.findElement(By.className("CwaK9")).click();
